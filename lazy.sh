@@ -14,9 +14,9 @@ if [ $# -eq 0 ]
             printf "\nLinking Successful\n"
             rm "$1".o
           else
-            printf "\nSomthing went wrong...\n"
+            printf "\nLinking failed... Aborted\n"
         fi
       else
-        printf "\nSomething went wrong...\n"
+        printf "\nAssembly failed... Aborted\n"
     fi
 fi
