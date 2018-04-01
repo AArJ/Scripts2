@@ -2,7 +2,7 @@
 
 if [ $# -eq 0 ]
   then
-    printf "Please specify a program\n"
+    printf "Please specify a file\n"
   else 
     as "$1".s -o "$1".o
     if [ $? -eq 0 ] 
