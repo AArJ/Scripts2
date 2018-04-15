@@ -15,6 +15,7 @@ if [ $# -eq 0 ]
             rm "$1".o
           else
             printf "\nLinking failed... Aborted\n"
+            rm "$1".o
         fi
       else
         printf "\nAssembly failed... Aborted\n"
