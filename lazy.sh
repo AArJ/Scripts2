@@ -2,21 +2,21 @@
 
 if [ $# -eq 0 ]
   then
-    printf "Please specify a file\n"
+    echo "Please specify a file"
   else 
     as "$1".s -o "$1".o
     if [ $? -eq 0 ] 
       then
-        printf "Assembly Successful...\n\n"
+        #Assembly succeeds
         ld "$1".o -o "$1"
         if [ $? -eq 0 ]
           then 
-            printf "\nLinking Successful\n"
+            #Linking succeeds 
             rm "$1".o
           else
-            printf "\nLinking failed... Aborted\n"
+            echo -e "\nLinking unsuccessful... exit code: $?"
         fi
       else
-        printf "\nAssembly failed... Aborted\n"
+        echo -e "\nAssembly unsuccessful... exit code: $?"
     fi
 fi
