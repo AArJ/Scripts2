@@ -15,6 +15,7 @@ if [ $# -eq 0 ]
             rm "$1".o
           else
             echo -e "\nLinking unsuccessful... exit code: $?"
+            rm "$1".o
         fi
       else
         echo -e "\nAssembly unsuccessful... exit code: $?"
